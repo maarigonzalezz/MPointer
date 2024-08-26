@@ -1,0 +1,85 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library"
+		],
+		"files" : 
+		[
+			"C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g -std=gnu++20 -fdiagnostics-color=always"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "20"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "Library_Mpointer::@f8ec5a5b81f69b06b2bb",
+	"name" : "Library_Mpointer",
+	"nameOnDisk" : "libLibrary_Mpointer.a",
+	"paths" : 
+	{
+		"build" : "C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug",
+		"source" : "C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/library.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}

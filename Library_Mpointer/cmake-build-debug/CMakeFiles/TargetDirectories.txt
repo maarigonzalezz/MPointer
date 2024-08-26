@@ -1,0 +1,3 @@
+C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/Library_Mpointer.dir
+C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/rebuild_cache.dir

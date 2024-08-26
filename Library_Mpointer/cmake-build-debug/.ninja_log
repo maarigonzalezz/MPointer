@@ -1,0 +1,4 @@
+# ninja log v6
+4	335	7464055635756934	build.ninja	47203325c4324e53
+29	388	7464055637419603	CMakeFiles/Library_Mpointer.dir/library.cpp.obj	8fa3e977f07aa93b
+390	621	7464055641019757	libLibrary_Mpointer.a	1e031bbb22e8e2b1

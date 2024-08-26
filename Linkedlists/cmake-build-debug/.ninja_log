@@ -1,0 +1,9 @@
+# ninja log v6
+8	428	7464071094233411	CMakeFiles/Linkedlists.dir/main.cpp.obj	3c5297398c9fd5bb
+2	430	7464071094171337	C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/Library_Mpointer.dir/library.cpp.obj	af9492aaeeb68743
+431	510	7464071098454618	C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a	d6a2ac267ac08166
+510	634	7464071099242822	Linkedlists.exe	e15749027d996afb
+35	412	7464073835233959	CMakeFiles/Linkedlists.dir/main.cpp.obj	3c5297398c9fd5bb
+29	414	7464073835173959	C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/Library_Mpointer.dir/library.cpp.obj	af9492aaeeb68743
+414	478	7464073839025476	C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a	d6a2ac267ac08166
+478	554	7464073839662178	Linkedlists.exe	e15749027d996afb

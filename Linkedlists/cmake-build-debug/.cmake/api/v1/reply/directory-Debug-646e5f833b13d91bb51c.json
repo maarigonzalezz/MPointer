@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug",
+		"source" : "C:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer"
+	}
+}
