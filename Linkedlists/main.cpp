@@ -3,8 +3,9 @@
 
 using namespace std;
 int main() {
-    Mpointer* ptr = new Mpointer();
-    ptr->foo();
-    cout << "hola";
+    Mpointer<int> Myptr = Mpointer<int>::New();
+    Mpointer<string> Myptr2 = Mpointer<string>::New();
+
+    cout << "            hola";
     return 0;
 }
