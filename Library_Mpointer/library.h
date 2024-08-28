@@ -12,15 +12,31 @@ private:
     {
         cout << "se crea:";
         ptr = new T(); //Reserva memoria para el valor T
-        cout << ptr;
+        cout << ptr << endl;
     }
 public:
     static Mpointer<T> New();
+    T& operator*();
+    T operator&();
 };
 
 template <typename T>
 Mpointer<T> Mpointer<T>::New(){
     return Mpointer<T>();
 }
+
+template <typename T>
+T& Mpointer<T>::operator*(){
+    return *this->ptr;
+}
+
+template <typename T>
+T Mpointer<T>::operator&(){
+    return *ptr;
+}
+
+
+
+
 
 #endif //LIBRARY_MPOINTER_LIBRARY_H
