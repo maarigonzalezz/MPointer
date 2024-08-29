@@ -117,6 +117,12 @@ build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-deb
   OBJECT_DIR = C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug\CMakeFiles\Library_Mpointer.dir
   OBJECT_FILE_DIR = C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug\CMakeFiles\Library_Mpointer.dir
 
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/Library_Mpointer.dir/MPointerGC.cpp.obj: CXX_COMPILER__Library_Mpointer_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/MPointerGC.cpp || cmake_object_order_depends_target_Library_Mpointer
+  DEP_FILE = C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug\CMakeFiles\Library_Mpointer.dir\MPointerGC.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  OBJECT_DIR = C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug\CMakeFiles\Library_Mpointer.dir
+  OBJECT_FILE_DIR = C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug\CMakeFiles\Library_Mpointer.dir
+
 
 # =============================================================================
 # Link build statements for STATIC_LIBRARY target Library_Mpointer
@@ -125,7 +131,7 @@ build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-deb
 #############################################
 # Link the static library C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug\libLibrary_Mpointer.a
 
-build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a: CXX_STATIC_LIBRARY_LINKER__Library_Mpointer_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/Library_Mpointer.dir/library.cpp.obj
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a: CXX_STATIC_LIBRARY_LINKER__Library_Mpointer_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/Library_Mpointer.dir/library.cpp.obj C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/Library_Mpointer.dir/MPointerGC.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug\CMakeFiles\Library_Mpointer.dir
   POST_BUILD = cd .
