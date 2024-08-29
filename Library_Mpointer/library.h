@@ -15,10 +15,30 @@ private:
         cout << ptr << endl;
     }
 public:
+    ~Mpointer(){
+        delete ptr;
+    }
     static Mpointer<T> New();
     T& operator*();
     T operator&();
+    // Operador de asignación para el mismo tipo T
+    template <typename U> //usamos U para guardar un valor de cualquier tipo
+    Mpointer<T>& operator=(const U& valor) {
+        static_assert(std::is_same_v<T, U>, "Tipos incompatibles"); //se compara que el tipo de U sea el mismo de mpointer
+        *ptr = valor; //hace el cambio
+        return *this;
+    }
+
+    // Operador de asignación para otro Mpointer<T>
+    Mpointer<T>& operator=(const Mpointer<T>& puntero) {
+        if (this != &puntero) {
+            ptr = (puntero.ptr); //hace un shallow copy para que tengan la misma dirr.
+        }
+        return *this;
+    }
 };
+
+//aaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 template <typename T>
 Mpointer<T> Mpointer<T>::New(){
@@ -34,6 +54,29 @@ template <typename T>
 T Mpointer<T>::operator&(){
     return *ptr;
 }
+
+/*template <typename T>
+Mpointer<T>& Mpointer<T>::operator=(const T& valor)
+{
+    T value = copy(valor);
+    if constexpr (std::is_same_v<T, decltype(value)>) {
+        *ptr = valor;
+    } else {
+        std::cerr << "Error: no se pudo asignar el valor ya que es incompatible" << std::endl;
+    }
+    return *this;
+}
+template <typename T>
+Mpointer<T>& Mpointer<T>::operator=(const Mpointer<T>& puntero) {
+    if (this != &puntero) {
+        *ptr = *(puntero.ptr);
+    }
+    return *this;
+}*/
+
+
+
+
 
 
 
