@@ -55,24 +55,6 @@ T Mpointer<T>::operator&(){
     return *ptr;
 }
 
-/*template <typename T>
-Mpointer<T>& Mpointer<T>::operator=(const T& valor)
-{
-    T value = copy(valor);
-    if constexpr (std::is_same_v<T, decltype(value)>) {
-        *ptr = valor;
-    } else {
-        std::cerr << "Error: no se pudo asignar el valor ya que es incompatible" << std::endl;
-    }
-    return *this;
-}
-template <typename T>
-Mpointer<T>& Mpointer<T>::operator=(const Mpointer<T>& puntero) {
-    if (this != &puntero) {
-        *ptr = *(puntero.ptr);
-    }
-    return *this;
-}*/
 
 
 

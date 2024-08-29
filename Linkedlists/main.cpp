@@ -11,7 +11,7 @@ int main() {
     *Myptr = 5;
     *Myptr3 = 10;
     //Myptr = "alo"; se cae
-    Myptr = Myptr3;
+    Myptr3 = Myptr;
     //Myptr = 9;
     valor2 = &Myptr3;
     valor = &Myptr;
