@@ -11,7 +11,7 @@ int main() {
     Mpointer<double> Myptr2 = Mpointer<double>::New();
     Mpointer<int> Myptr3 = Mpointer<int>::New();
     //Overload *
-    *Myptr = 5;
+    *Myptr = 7;
     *Myptr3 = 10;
 
     //overload =
@@ -24,7 +24,7 @@ int main() {
     valor = &Myptr;
     valor3 = &Myptr4;
     valor4 = &Myptr2;
-    //cout << valor << endl << valor2 << endl << valor3 << endl << valor4;
+    cout << valor << endl << valor2 << endl << valor3 << endl << valor4;
 
 
     cout << "            hola";

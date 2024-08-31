@@ -4,7 +4,9 @@
 
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
+//#include "MPointerGC.h"
 #include <iostream>
+using namespace std;
 
 struct Node
 {
@@ -16,6 +18,7 @@ struct Node
 
 // Lista enlazada
 class LinkedList {
+   // MPointerGC* garbagecollector1 = MPointerGC::GetInstance();
 private:
     Node* head;     // Puntero al primer nodo de la lista
 
@@ -27,9 +30,10 @@ public:
     ~LinkedList() = default;
 
     //añadir un nuevo pointer
-    void newMpointer(int id, void* adress, int refcount);
-    void addRefCount(int identifier);
-    void deleteRef(int identifier);
+    void newMpointer(int id, void* adress);
+    void addRef(int identifier);
+    int deleteRef(int identifier);
+    void deleteMpointer(int identifier);
 };
 
 

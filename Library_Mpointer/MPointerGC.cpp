@@ -18,6 +18,17 @@ MPointerGC *MPointerGC::GetInstance()
     return pinstance_;
 }
 
+int MPointerGC::registerMemory(void* adress){
+   this->autoid ++;
+    int iD = this->autoid;
+    this->list.newMpointer(iD, adress);
+    return iD;
+}
+
+void MPointerGC::add_ref(int id){
+    list.addRef(id);
+}
+
 
 
 /*void ThreadBar(){

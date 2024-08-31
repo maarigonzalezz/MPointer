@@ -9,16 +9,22 @@ template <typename T>
 class Mpointer {
     MPointerGC* garbagecollector = MPointerGC::GetInstance();
 private:
+    int assignedID;
     T* ptr = nullptr;  // Atributo que es un puntero a un objeto de tipo T
 
     //Constructor
     Mpointer(){
         ptr = new T();
-        cout << T() << typeid(T()).name();
-
+        cout << T();
+        assignedID = MPointerGC::GetInstance()->registerMemory(ptr);
+        cout << assignedID;
     }
 public:
-    Mpointer(const Mpointer & other){ptr = (other.ptr);} //Es un constructor copy
+    Mpointer(const Mpointer & other){
+        ptr = (other.ptr);
+        assignedID = (other.assignedID); //asignar el mismo ID para añadir una ref
+        MPointerGC::GetInstance()->add_ref(assignedID);
+    } //Es un constructor copy
 
     //Destructor
     ~Mpointer(){
@@ -55,6 +61,9 @@ public:
     Mpointer<T>& operator=(const Mpointer<T>& puntero) {
         if (this != &puntero) {
             ptr = (puntero.ptr); //hace un shallow copy para que tengan la misma dirr.
+            MPointerGC::GetInstance()->add_ref(puntero.assignedID);
+            //MPointerGC::GetInstance()->delete_ref(puntero.assignedID);
+            cout << assignedID;
         }
         return *this;
     }
