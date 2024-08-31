@@ -37,6 +37,10 @@ bool MPointerGC::delete_ref(int id) {
     return false;
 }
 
+void MPointerGC::debug(){
+    list.print();
+}
+
 
 
 

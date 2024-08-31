@@ -56,6 +56,15 @@ Node* LinkedList::getInstance(int identifier) {
     return nullptr; // Return nullptr if the node is not found
 }
 
+void LinkedList::print(){
+    Node* current = head;
+    while (current != nullptr){
+       cout << "ID: " << current->id << " RefCount: " << current->refCount  << " Adress: " << current->adress << endl;
+        current = current->next;
+    }
+}
+
+
 void LinkedList::deleteMpointer(int identifier){
     // Si la lista está vacía
     if (head == nullptr) {

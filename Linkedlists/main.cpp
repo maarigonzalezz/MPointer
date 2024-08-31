@@ -2,8 +2,64 @@
 #include "library.h"
 
 using namespace std;
+
+Mpointer<int> foo(){
+    Mpointer<int> temp2 = Mpointer<int>::New();
+    Mpointer<int> temp = Mpointer<int>::New();
+    temp = 666;
+
+    MPointerGC::GetInstance()->debug();
+
+    return temp;
+}
+
+
+
+
 int main() {
-    int valor;
+    Mpointer<int> mp1 = Mpointer<int>::New();
+    Mpointer<int> mp2 = Mpointer<int>::New();
+    Mpointer<double> doub = Mpointer<double>::New();
+    Mpointer<double> doub2 = Mpointer<double>::New();
+
+    foo();
+
+    MPointerGC::GetInstance()->debug();
+
+    *mp1 = 100;
+    mp2 = 55;
+
+    Mpointer<int> mp3 = mp2;
+    MPointerGC::GetInstance()->debug();
+
+    mp3 = mp1;
+    Mpointer<double> doub3 = Mpointer<double>::New();
+    MPointerGC::GetInstance()->debug();
+
+
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
+
+
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*int valor;
     int valor2;
     int valor3;
     double valor4;
@@ -24,9 +80,4 @@ int main() {
     valor = &Myptr;
     valor3 = &Myptr4;
     valor4 = &Myptr2;
-    cout << valor << endl << valor2 << endl << valor3 << endl << valor4;
-
-
-    cout << "            hola";
-    return 0;
-}
+    cout << valor << endl << valor2 << endl << valor3 << endl << valor4;*/

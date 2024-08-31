@@ -32,7 +32,7 @@ public:
     int registerMemory(void* adress);
     void add_ref(int id);
     bool delete_ref(int id);
-
+    void debug();
     //void freeMpointer()
 };
 
