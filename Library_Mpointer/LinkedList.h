@@ -4,7 +4,7 @@
 
 #ifndef LINKEDLIST_H
 #define LINKEDLIST_H
-//#include "MPointerGC.h"
+
 #include <iostream>
 using namespace std;
 

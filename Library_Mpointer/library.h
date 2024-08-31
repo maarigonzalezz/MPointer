@@ -27,7 +27,10 @@ public:
 
     //Destructor
     ~Mpointer(){
-        delete ptr;
+        if (MPointerGC::GetInstance()->delete_ref(assignedID)) {
+            ptr = nullptr;
+            cout << "delete ptr destructor" << endl;
+        }
     }
 
     //genera un nuevo Mpointer sin llamar al constructor directamente
