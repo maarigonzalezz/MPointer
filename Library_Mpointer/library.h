@@ -14,8 +14,8 @@ private:
     //Constructor
     Mpointer(){
         ptr = new T();
-        cout << T() << endl;
-        //garbagecollector->add(T());
+        cout << T() << typeid(T()).name();
+
     }
 public:
     Mpointer(const Mpointer & other){ptr = (other.ptr);} //Es un constructor copy
@@ -25,9 +25,23 @@ public:
         delete ptr;
     }
 
-    static Mpointer<T> New(); //metodo new
-    T& operator*(); //sobrecarga de *
-    T operator&(); //sobrecarga de &
+    //genera un nuevo Mpointer sin llamar al constructor directamente
+    static Mpointer<T> New()
+    {
+        return Mpointer<T>();
+    }
+
+
+    //sobrecarga de *, accede a la memoria de *ptr para que se le asigne un valor
+    T& operator*(){
+        return *this->ptr;
+    }
+
+    //sobrecarga de &, devuelve el valor de ptr
+    T operator&(){
+        return *ptr;
+    }
+
 
     // Operador de asignación para el mismo tipo T
     template <typename U> //usamos U para guardar un valor de cualquier tipo
@@ -45,25 +59,5 @@ public:
         return *this;
     }
 };
-
-//desarrollo
-
-//Nos ayuda a generar un nuevo Mpointer sin llamar al constructor directamente
-template <typename T>
-Mpointer<T> Mpointer<T>::New(){
-    return Mpointer<T>();
-}
-
-//Lo que hace es que accede a la memoria de *ptr para que se le asigne un valor
-template <typename T>
-T& Mpointer<T>::operator*(){
-    return *this->ptr;
-}
-
-//Devuelve el valor de ptr
-template <typename T>
-T Mpointer<T>::operator&(){
-    return *ptr;
-}
 
 #endif //LIBRARY_MPOINTER_LIBRARY_H

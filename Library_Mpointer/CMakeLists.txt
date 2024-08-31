@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 20)
 
 add_library(Library_Mpointer STATIC library.cpp
         MPointerGC.cpp
-        MPointerGC.h)
+        MPointerGC.h
+        LinkedList.cpp
+        LinkedList.h)

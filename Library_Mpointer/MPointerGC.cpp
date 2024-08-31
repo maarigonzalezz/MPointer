@@ -18,18 +18,6 @@ MPointerGC *MPointerGC::GetInstance()
     return pinstance_;
 }
 
-void MPointerGC::add(int value, string adr){
-    Node* newNode = new Node(value, move(adr));
-    if (head == nullptr) {
-        head = newNode;
-    } else {
-        Node* temp = head;
-        while (temp->Next != nullptr) {
-            temp = temp->Next;
-        }
-        temp->Next = newNode;
-    }
-}
 
 
 /*void ThreadBar(){

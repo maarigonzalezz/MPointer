@@ -24,7 +24,7 @@ int main() {
     valor = &Myptr;
     valor3 = &Myptr4;
     valor4 = &Myptr2;
-    cout << valor << endl << valor2 << endl << valor3 << endl << valor4;
+    //cout << valor << endl << valor2 << endl << valor3 << endl << valor4;
 
 
     cout << "            hola";
