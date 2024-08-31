@@ -15,17 +15,16 @@ private:
     //Constructor
     Mpointer(){
         ptr = new T();
-        assignedID = MPointerGC::GetInstance()->registerMemory(ptr);
-        //cout << assignedID;
+        assignedID = MPointerGC::GetInstance()->registerMemory(ptr); // Asigna un id
     }
 public:
     Mpointer(const Mpointer & other){
         ptr = (other.ptr);
-        assignedID = (other.assignedID); //asignar el mismo ID para añadir una ref
+        assignedID = (other.assignedID); // Asignar el mismo ID para añadir una ref
         MPointerGC::GetInstance()->add_ref(assignedID);
     } //Es un constructor copy
 
-    //Destructor
+    // Destructor
     ~Mpointer(){
         if (MPointerGC::GetInstance()->delete_ref(assignedID)) {
             ptr = nullptr;
@@ -33,19 +32,19 @@ public:
         }
     }
 
-    //genera un nuevo Mpointer sin llamar al constructor directamente
+    // Genera un nuevo Mpointer sin llamar al constructor directamente
     static Mpointer<T> New()
     {
         return Mpointer<T>();
     }
 
 
-    //sobrecarga de *, accede a la memoria de *ptr para que se le asigne un valor
+    // Sobrecarga de *, accede a la memoria de *ptr para que se le asigne un valor
     T& operator*(){
         return *this->ptr;
     }
 
-    //sobrecarga de &, devuelve el valor de ptr
+    // Sobrecarga de &, devuelve el valor de ptr
     T operator&(){
         return *ptr;
     }
@@ -71,11 +70,11 @@ public:
         return *this;
     }
 
+    // Verifica si ya no hay referencias para hacer delete
     void delete_ptr(bool dtonant) {
         if (dtonant == true) {
             delete ptr;
             ptr = nullptr;
-            cout << "delete ptr" << endl;
         }
     }
 };

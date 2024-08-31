@@ -4,7 +4,7 @@
 
 #include "LinkedList.h"
 
-
+// Agrega una nueva instancia a la clase
 void LinkedList::newMpointer(int id, void* adress){
     Node* newNode = new Node(id, adress, 1);
     if (head == nullptr) {
@@ -18,17 +18,19 @@ void LinkedList::newMpointer(int id, void* adress){
     }
 }
 
+// Añade 1 al conteo de referencias
 void LinkedList::addRef(int identifier){
     Node* current = head;
     while (current != nullptr) {
         if (current->id == identifier) {
             current->refCount ++;
-            cout << "numero de ref: "<< current->refCount << endl;
+            //cout << "numero de ref: "<< current->refCount << endl;
         }
         current = current->next;
     }
 }
 
+// Resta 1 al conteo de referencias
 int LinkedList::deleteRef(int identifier){
     Node* current = head;
     while (current != nullptr) {
@@ -45,17 +47,7 @@ int LinkedList::deleteRef(int identifier){
     return -1;
 }
 
-Node* LinkedList::getInstance(int identifier) {
-    Node* current = head;
-    while (current != nullptr) {
-        if (current->id == identifier) {
-            return current;
-        }
-        current = current->next;
-    }
-    return nullptr; // Return nullptr if the node is not found
-}
-
+// Print los datos de cada nodo
 void LinkedList::print(){
     Node* current = head;
     while (current != nullptr){
@@ -64,7 +56,7 @@ void LinkedList::print(){
     }
 }
 
-
+// Cuando el coneto de referencias llega a 0 se elimina el nodo de la lista
 void LinkedList::deleteMpointer(int identifier){
     // Si la lista está vacía
     if (head == nullptr) {

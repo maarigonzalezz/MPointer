@@ -8,6 +8,8 @@
 MPointerGC* MPointerGC::pinstance_{nullptr};
 std::mutex MPointerGC::mutexx;
 
+
+// Controla el acceso a la instancia
 MPointerGC *MPointerGC::GetInstance()
 {
     std::lock_guard<std::mutex> lock(mutexx);
@@ -18,6 +20,7 @@ MPointerGC *MPointerGC::GetInstance()
     return pinstance_;
 }
 
+// Genera un ID y ademas lo registra en la linked list con la direccion de memoria
 int MPointerGC::registerMemory(void* adress){
    this->autoid ++;
     int iD = this->autoid;
@@ -25,10 +28,12 @@ int MPointerGC::registerMemory(void* adress){
     return iD;
 }
 
+// Llama el metodo de la linked list para que añada una referencia
 void MPointerGC::add_ref(int id){
     list.addRef(id);
 }
 
+// Funcion booleana que verifica si ya no existen referencias
 bool MPointerGC::delete_ref(int id) {
     int ref = list.deleteRef(id);
     if (ref == 0) {
@@ -37,16 +42,7 @@ bool MPointerGC::delete_ref(int id) {
     return false;
 }
 
+// Función debug, llama a linked list para que imprima los datos
 void MPointerGC::debug(){
     list.print();
 }
-
-
-
-
-/*void ThreadBar(){
-    // Following code emulates slow initialization.
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-    MPointerGC* singleton = MPointerGC::GetInstance("BAR");
-    std::cout << singleton->value() << "\n";
-}*/

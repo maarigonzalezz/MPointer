@@ -33,6 +33,7 @@ int main() {
     MPointerGC::GetInstance()->debug();
 
     mp3 = mp1;
+    doub2 = doub;
     Mpointer<double> doub3 = Mpointer<double>::New();
     MPointerGC::GetInstance()->debug();
 

@@ -8,6 +8,7 @@
 #include <iostream>
 using namespace std;
 
+// Node, tiene todos los datos que necesita
 struct Node
 {
     int id;
@@ -18,7 +19,6 @@ struct Node
 
 // Lista enlazada
 class LinkedList {
-   // MPointerGC* garbagecollector1 = MPointerGC::GetInstance();
 private:
     Node* head;     // Puntero al primer nodo de la lista
 
@@ -29,12 +29,10 @@ public:
     // Destructor de la lista
     ~LinkedList() = default;
 
-    //añadir un nuevo pointer
     void newMpointer(int id, void* adress);
     void addRef(int identifier);
     int deleteRef(int identifier);
     void deleteMpointer(int identifier);
-    Node* getInstance(int identifier);
     void print();
 };
 

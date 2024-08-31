@@ -33,7 +33,6 @@ public:
     void add_ref(int id);
     bool delete_ref(int id);
     void debug();
-    //void freeMpointer()
 };
 
 #endif //MPOINTERGC_H
