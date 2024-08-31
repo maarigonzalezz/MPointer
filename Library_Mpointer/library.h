@@ -16,19 +16,22 @@ private:
     Mpointer(){
         ptr = new T();
         assignedID = MPointerGC::GetInstance()->registerMemory(ptr); // Asigna un id
+        cout << "MPointer::New" << endl;
     }
 public:
     Mpointer(const Mpointer & other){
         ptr = (other.ptr);
         assignedID = (other.assignedID); // Asignar el mismo ID para añadir una ref
         MPointerGC::GetInstance()->add_ref(assignedID);
+        cout << "MPointer::Constructor Copy" << endl;
     } //Es un constructor copy
 
     // Destructor
     ~Mpointer(){
         if (MPointerGC::GetInstance()->delete_ref(assignedID)) {
+            //delete ptr;
             ptr = nullptr;
-            cout << "delete ptr destructor" << endl;
+            cout << "MPointer::Destructor" << endl;
         }
     }
 
@@ -41,11 +44,13 @@ public:
 
     // Sobrecarga de *, accede a la memoria de *ptr para que se le asigne un valor
     T& operator*(){
+        cout << "MPointer::*" << endl;
         return *this->ptr;
     }
 
     // Sobrecarga de &, devuelve el valor de ptr
     T operator&(){
+        cout << "MPointer::&" << endl;
         return *ptr;
     }
 
@@ -55,6 +60,7 @@ public:
     Mpointer<T>& operator=(const U& valor) {
         static_assert(std::is_same_v<T, U>, "Tipos incompatibles"); //se compara que el tipo de U sea el mismo de mpointer
         *ptr = valor; //hace el cambio
+        cout << "MPointer::=" << endl;
         return *this;
     }
 
@@ -66,6 +72,7 @@ public:
             bool dtonant = MPointerGC::GetInstance()->delete_ref(assignedID);
             delete_ptr(dtonant);
             assignedID = puntero.assignedID;
+            cout << "MPointer::=" << endl;
         }
         return *this;
     }
