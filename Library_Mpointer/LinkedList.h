@@ -34,6 +34,7 @@ public:
     void addRef(int identifier);
     int deleteRef(int identifier);
     void deleteMpointer(int identifier);
+    Node* getInstance(int identifier);
 };
 
 

@@ -29,6 +29,15 @@ void MPointerGC::add_ref(int id){
     list.addRef(id);
 }
 
+bool MPointerGC::delete_ref(int id) {
+    int ref = list.deleteRef(id);
+    if (ref == 0) {
+        return true;
+    }
+    return false;
+}
+
+
 
 
 /*void ThreadBar(){

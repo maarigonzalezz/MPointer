@@ -15,9 +15,8 @@ private:
     //Constructor
     Mpointer(){
         ptr = new T();
-        cout << T();
         assignedID = MPointerGC::GetInstance()->registerMemory(ptr);
-        cout << assignedID;
+        //cout << assignedID;
     }
 public:
     Mpointer(const Mpointer & other){
@@ -62,10 +61,19 @@ public:
         if (this != &puntero) {
             ptr = (puntero.ptr); //hace un shallow copy para que tengan la misma dirr.
             MPointerGC::GetInstance()->add_ref(puntero.assignedID);
-            //MPointerGC::GetInstance()->delete_ref(puntero.assignedID);
-            cout << assignedID;
+            bool dtonant = MPointerGC::GetInstance()->delete_ref(assignedID);
+            delete_ptr(dtonant);
+            assignedID = puntero.assignedID;
         }
         return *this;
+    }
+
+    void delete_ptr(bool dtonant) {
+        if (dtonant == true) {
+            delete ptr;
+            ptr = nullptr;
+            cout << "delete ptr" << endl;
+        }
     }
 };
 

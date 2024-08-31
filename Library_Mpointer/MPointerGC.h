@@ -31,7 +31,7 @@ public:
     static MPointerGC *GetInstance();
     int registerMemory(void* adress);
     void add_ref(int id);
-    //void delete_ref(int id);
+    bool delete_ref(int id);
 
     //void freeMpointer()
 };

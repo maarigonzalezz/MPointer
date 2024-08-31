@@ -23,7 +23,7 @@ void LinkedList::addRef(int identifier){
     while (current != nullptr) {
         if (current->id == identifier) {
             current->refCount ++;
-            cout << "numero de ref: "<< current->refCount;
+            cout << "numero de ref: "<< current->refCount << endl;
         }
         current = current->next;
     }
@@ -36,12 +36,24 @@ int LinkedList::deleteRef(int identifier){
             current->refCount -= 1;
             if (current->refCount == 0) {
                //llamar funcion
+                deleteMpointer(identifier);
             }
             return current->refCount;
         }
         current = current->next;
     }
     return -1;
+}
+
+Node* LinkedList::getInstance(int identifier) {
+    Node* current = head;
+    while (current != nullptr) {
+        if (current->id == identifier) {
+            return current;
+        }
+        current = current->next;
+    }
+    return nullptr; // Return nullptr if the node is not found
 }
 
 void LinkedList::deleteMpointer(int identifier){
@@ -73,7 +85,6 @@ void LinkedList::deleteMpointer(int identifier){
     previous->next = current->next;
     // Eliminar el nodo
     delete current;
-
 }
 
 
