@@ -34,6 +34,7 @@ public:
     int deleteRef(int identifier);
     void deleteMpointer(int identifier);
     void print();
+    void* getAdress(int identifier);
 };
 
 

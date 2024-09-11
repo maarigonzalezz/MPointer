@@ -28,11 +28,10 @@ public:
 
     // Destructor
     ~Mpointer(){
-        if (MPointerGC::GetInstance()->delete_ref(assignedID)) {
+        MPointerGC::GetInstance()->delete_ref(assignedID);
             //delete ptr;
             ptr = nullptr;
             cout << "MPointer::Destructor" << endl;
-        }
     }
 
     // Genera un nuevo Mpointer sin llamar al constructor directamente
@@ -69,20 +68,11 @@ public:
         if (this != &puntero) {
             ptr = (puntero.ptr); //hace un shallow copy para que tengan la misma dirr.
             MPointerGC::GetInstance()->add_ref(puntero.assignedID);
-            bool dtonant = MPointerGC::GetInstance()->delete_ref(assignedID);
-            delete_ptr(dtonant);
+            MPointerGC::GetInstance()->delete_ref(assignedID);
             assignedID = puntero.assignedID;
             cout << "MPointer::=" << endl;
         }
         return *this;
-    }
-
-    // Verifica si ya no hay referencias para hacer delete
-    void delete_ptr(bool dtonant) {
-        if (dtonant == true) {
-            delete ptr;
-            ptr = nullptr;
-        }
     }
 };
 

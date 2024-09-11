@@ -34,13 +34,18 @@ void MPointerGC::add_ref(int id){
 }
 
 // Funcion booleana que verifica si ya no existen referencias
-bool MPointerGC::delete_ref(int id) {
+void MPointerGC::delete_ref(int id) {
     int ref = list.deleteRef(id);
     if (ref == 0) {
-        return true;
+        void* adr = list.getAdress(id);
+        this->freeMpointer(adr);
     }
-    return false;
 }
+
+void MPointerGC::freeMpointer(void* adress){
+    free(adress);
+}
+
 
 // Función debug, llama a linked list para que imprima los datos
 void MPointerGC::debug(){

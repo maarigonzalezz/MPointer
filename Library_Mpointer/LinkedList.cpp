@@ -36,10 +36,6 @@ int LinkedList::deleteRef(int identifier){
     while (current != nullptr) {
         if (current->id == identifier) {
             current->refCount -= 1;
-            if (current->refCount == 0) {
-               //llamar funcion
-                deleteMpointer(identifier);
-            }
             return current->refCount;
         }
         current = current->next;
@@ -56,7 +52,19 @@ void LinkedList::print(){
     }
 }
 
-// Cuando el coneto de referencias llega a 0 se elimina el nodo de la lista
+void* LinkedList::getAdress(int identifier){
+    Node* current = head;
+    while (current != nullptr) {
+        if (current->id == identifier) {
+            return current->adress;
+        }
+        current = current->next;
+    }
+    return nullptr;
+}
+
+
+// Cuando el conteo de referencias llega a 0 se elimina el nodo de la lista
 void LinkedList::deleteMpointer(int identifier){
     // Si la lista está vacía
     if (head == nullptr) {
