@@ -1,7 +1,7 @@
 #ifndef LIBRARY_MPOINTER_LIBRARY_H
 #define LIBRARY_MPOINTER_LIBRARY_H
 #include <iostream>
-
+#include <optional>
 #include "MPointerGC.h"
 
 using namespace std;
@@ -9,7 +9,7 @@ template <typename T>
 class Mpointer {
     MPointerGC* garbagecollector = MPointerGC::GetInstance();
 private:
-    int assignedID;
+    int assignedID{};
     T* ptr = nullptr;  // Atributo que es un puntero a un objeto de tipo T
 
     //Constructor
@@ -19,13 +19,20 @@ private:
         cout << "MPointer::New" << endl;
     }
 public:
+    //Constructor copy 1
     Mpointer(const Mpointer & other){
         ptr = (other.ptr);
         assignedID = (other.assignedID); // Asignar el mismo ID para añadir una ref
         MPointerGC::GetInstance()->add_ref(assignedID);
         cout << "MPointer::Constructor Copy" << endl;
-    } //Es un constructor copy
+    }
 
+    Mpointer(const std::nullptr_t nullValue)
+    {
+        ptr = nullValue;
+        cout << "se crea uno de estos" << endl;
+        cout << "MPointer::Constructor Copy 2" << endl;
+    }
     // Destructor
     ~Mpointer(){
         MPointerGC::GetInstance()->delete_ref(assignedID);
@@ -53,6 +60,16 @@ public:
         return *ptr;
     }
 
+    T* operator->() {
+        std::cout << "MPointer::->" << std::endl;
+        return this->ptr;
+    }
+
+    // Operador de asignación para apuntar a null
+    Mpointer<T>& operator=(std::nullptr_t) {
+        ptr = nullptr;  // Asignar el puntero interno a nullptr
+        return *this;
+    }
 
     // Operador de asignación para el mismo tipo T
     template <typename U> //usamos U para guardar un valor de cualquier tipo
@@ -74,6 +91,13 @@ public:
         }
         return *this;
     }
+
+    // Sobrecarga del operador de igualdad
+    bool operator==(const Mpointer<T>& other) const {
+        // Comparar si los dos punteros apuntan a la misma dirección de memoria
+        return this->ptr == other.ptr;
+    }
+
 };
 
 #endif //LIBRARY_MPOINTER_LIBRARY_H

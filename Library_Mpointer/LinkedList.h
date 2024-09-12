@@ -11,7 +11,7 @@ using namespace std;
 // Node, tiene todos los datos que necesita
 struct Node
 {
-    int id;
+    int id = 0;
     void* adress = nullptr;
     int refCount = 0;
     Node* next = nullptr;

@@ -44,6 +44,7 @@ void MPointerGC::delete_ref(int id) {
 
 void MPointerGC::freeMpointer(void* adress){
     free(adress);
+    cout << "MPointer Deleted" << endl;
 }
 
 

@@ -1,6 +1,7 @@
 #include <iostream>
 #include "library.h"
-
+#include "DoubleLinkedList.h"
+#include "Sorters.h"
 using namespace std;
 
 Mpointer<int> foo(){
@@ -14,13 +15,23 @@ Mpointer<int> foo(){
 }
 
 
-
+struct Alo
+{
+    int a = 0;
+    int l = 0;
+    int o = 0;
+};
 
 int main() {
     Mpointer<int> mp1 = Mpointer<int>::New();
     Mpointer<int> mp2 = Mpointer<int>::New();
     Mpointer<double> doub = Mpointer<double>::New();
     Mpointer<double> doub2 = Mpointer<double>::New();
+    Mpointer<char> chari = Mpointer<char>::New();
+    Mpointer<Alo> ola = Mpointer<Alo>::New();
+    ola->a = 5;
+    cout << ola->a << "yayayayayayay" << endl;
+
 
     foo();
 
@@ -28,6 +39,8 @@ int main() {
 
     *mp1 = 100;
     mp2 = 55;
+    chari = 'a';
+    char a;
 
     Mpointer<int> mp3 = mp2;
     MPointerGC::GetInstance()->debug();
@@ -37,48 +50,20 @@ int main() {
     Mpointer<double> doub3 = Mpointer<double>::New();
     MPointerGC::GetInstance()->debug();
 
+    DoubleLinkedList testlist;
+    testlist.add(1);
+    testlist.add(2);
+    testlist.add(31);
+    testlist.add(19);
+    testlist.add(110);
+    testlist.add(79);
 
+    testlist.printForward();
+
+    MPointerGC::GetInstance()->debug();
 
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
 
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*int valor;
-    int valor2;
-    int valor3;
-    double valor4;
-    Mpointer<int> Myptr = Mpointer<int>::New();
-    Mpointer<double> Myptr2 = Mpointer<double>::New();
-    Mpointer<int> Myptr3 = Mpointer<int>::New();
-    //Overload *
-    *Myptr = 7;
-    *Myptr3 = 10;
-
-    //overload =
-    Myptr3 = Myptr;
-    Mpointer<int> Myptr4 = Myptr;
-    Myptr2 = 5.5;
-
-    //Overload &
-    valor2 = &Myptr3;
-    valor = &Myptr;
-    valor3 = &Myptr4;
-    valor4 = &Myptr2;
-    cout << valor << endl << valor2 << endl << valor3 << endl << valor4;*/
