@@ -23,6 +23,7 @@ struct Alo
 };
 
 int main() {
+    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     Mpointer<int> mp1 = Mpointer<int>::New();
     Mpointer<int> mp2 = Mpointer<int>::New();
     Mpointer<double> doub = Mpointer<double>::New();
@@ -53,20 +54,19 @@ int main() {
     DoubleLinkedList testlist;
     Sorters sorter;
     testlist.add(1);
-    testlist.add(2);
+    //testlist.add(2);
     testlist.add(31);
     testlist.add(19);
     testlist.add(110);
     testlist.add(79);
 
     testlist.printForward();
-    testlist.printBackward();
+    //testlist.printBackward();
     sorter.bubbleSort(testlist);
+    testlist.printForward();
+
 
     MPointerGC::GetInstance()->debug();
-
-    std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-
 
     return 0;
 }

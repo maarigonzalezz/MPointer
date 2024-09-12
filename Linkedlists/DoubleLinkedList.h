@@ -22,7 +22,10 @@ public:
     DoubleLinkedList() = default;
 
     // Destructor de la lista
-    ~DoubleLinkedList() = default;
+    ~DoubleLinkedList()
+    {
+        cout << "DESTRUCTOR DLL" << endl;
+    }
 
     void add(int value);
     void printForward() const;  // Imprimir la lista hacia adelante
