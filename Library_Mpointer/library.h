@@ -30,7 +30,6 @@ public:
     Mpointer(const std::nullptr_t nullValue)
     {
         ptr = nullValue;
-        cout << "se crea uno de estos" << endl;
         cout << "MPointer::Constructor Copy 2" << endl;
     }
     // Destructor
@@ -61,7 +60,7 @@ public:
     }
 
     T* operator->() {
-        std::cout << "MPointer::->" << std::endl;
+        //std::cout << "MPointer::->" << std::endl;
         return this->ptr;
     }
 

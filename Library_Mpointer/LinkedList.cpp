@@ -47,7 +47,7 @@ int LinkedList::deleteRef(int identifier){
 void LinkedList::print(){
     Node* current = head;
     while (current != nullptr){
-       cout << "ID: " << current->id << " RefCount: " << current->refCount  << " Adress: " << current->adress << endl;
+       cout << "ID: " << current->id << " RefCount: " << current->refCount  << " Adress: " << endl;
         current = current->next;
     }
 }

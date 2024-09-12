@@ -51,6 +51,7 @@ int main() {
     MPointerGC::GetInstance()->debug();
 
     DoubleLinkedList testlist;
+    Sorters sorter;
     testlist.add(1);
     testlist.add(2);
     testlist.add(31);
@@ -59,6 +60,8 @@ int main() {
     testlist.add(79);
 
     testlist.printForward();
+    testlist.printBackward();
+    sorter.bubbleSort(testlist);
 
     MPointerGC::GetInstance()->debug();
 

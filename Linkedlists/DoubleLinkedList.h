@@ -27,9 +27,14 @@ public:
     void add(int value);
     void printForward() const;  // Imprimir la lista hacia adelante
     void printBackward() const; // Imprimir la lista hacia atrás
+    int getLength() const; // Conseguir el largo de la lista
+    int get(int index) const;
+    void set(int index, int value);
 private:
     Mpointer<Nod3> head = nullptr;
     Mpointer<Nod3> tail = nullptr;
+    int length = 0;
+    Mpointer<Nod3> getNodeAt(int index) const; // Metodo para conseguir el indice
 
 };
 

@@ -63,12 +63,12 @@ build CMakeFiles/Linkedlists.dir/DoubleLinkedList.cpp.obj: CXX_COMPILER__Linkedl
   OBJECT_DIR = CMakeFiles\Linkedlists.dir
   OBJECT_FILE_DIR = CMakeFiles\Linkedlists.dir
 
-build CMakeFiles/Linkedlists.dir/tst/Sorters.cpp.obj: CXX_COMPILER__Linkedlists_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/tst/Sorters.cpp || cmake_object_order_depends_target_Linkedlists
-  DEP_FILE = CMakeFiles\Linkedlists.dir\tst\Sorters.cpp.obj.d
+build CMakeFiles/Linkedlists.dir/Sorters.cpp.obj: CXX_COMPILER__Linkedlists_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/Sorters.cpp || cmake_object_order_depends_target_Linkedlists
+  DEP_FILE = CMakeFiles\Linkedlists.dir\Sorters.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer
   OBJECT_DIR = CMakeFiles\Linkedlists.dir
-  OBJECT_FILE_DIR = CMakeFiles\Linkedlists.dir\tst
+  OBJECT_FILE_DIR = CMakeFiles\Linkedlists.dir
 
 
 # =============================================================================
@@ -78,7 +78,7 @@ build CMakeFiles/Linkedlists.dir/tst/Sorters.cpp.obj: CXX_COMPILER__Linkedlists_
 #############################################
 # Link the executable Linkedlists.exe
 
-build Linkedlists.exe: CXX_EXECUTABLE_LINKER__Linkedlists_Debug CMakeFiles/Linkedlists.dir/main.cpp.obj CMakeFiles/Linkedlists.dir/DoubleLinkedList.cpp.obj CMakeFiles/Linkedlists.dir/tst/Sorters.cpp.obj | C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a
+build Linkedlists.exe: CXX_EXECUTABLE_LINKER__Linkedlists_Debug CMakeFiles/Linkedlists.dir/main.cpp.obj CMakeFiles/Linkedlists.dir/DoubleLinkedList.cpp.obj CMakeFiles/Linkedlists.dir/Sorters.cpp.obj | C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Linkedlists.dir
