@@ -70,7 +70,7 @@ public:
 
     // Operador de asignación para apuntar a null
     Mpointer<T>& operator=(std::nullptr_t){
-        ptr = nullptr;  // Assign internal pointer to nullptr
+        ptr = nullptr;
         if (assignedID != -1) {
             MPointerGC::GetInstance()->delete_ref(assignedID);
         }
@@ -101,7 +101,7 @@ public:
 
     // Sobrecarga del operador de igualdad y compara si dos punteros apuntan a la misma dirección de memoria
     bool operator==(const Mpointer<T>& other) const {
-        //cout << "COMPARACION" << endl;
+        //cout << "MPointer::==" << endl;
         return this->ptr == other.ptr;
     }
 
