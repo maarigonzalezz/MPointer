@@ -46,6 +46,7 @@ int LinkedList::deleteRef(int identifier){
 // Print los datos de cada nodo
 void LinkedList::print(){
     Node* current = head;
+    cout << "DEBUGGER" << endl;
     while (current != nullptr){
        cout << "ID: " << current->id << " RefCount: " << current->refCount  << " Adress: " << current->adress << endl;
         current = current->next;

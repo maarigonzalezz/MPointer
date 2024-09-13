@@ -40,7 +40,7 @@ void MPointerGC::delete_ref(int id) {
     if (ref == 0) {
         void* adr = list.getAdress(id);
         if (adr != nullptr) {
-            cout << "Se va a liberar la memoria de ID: " << id << endl;
+            //cout << "Se va a liberar la memoria de ID: " << id << endl;
             this->freeMpointer(adr);
         } else {
             cout << "Error: Dirección no encontrada para ID: " << id << endl;

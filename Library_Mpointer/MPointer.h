@@ -18,9 +18,10 @@ private:
         if (ptr != nullptr) {
             assignedID = MPointerGC::GetInstance()->registerMemory(ptr);
         }
-        cout << "MPointer::New" << endl;
+        //cout << "MPointer::New" << endl;
     }
 public:
+
     //Constructor copy 1
     Mpointer(const Mpointer & other){
         ptr = (other.ptr);
@@ -29,18 +30,19 @@ public:
         //cout << "MPointer::Constructor Copy" << endl;
     }
 
-    Mpointer(const std::nullptr_t nullValue)
-    {
-        ptr = nullptr; // Set the internal pointer to nullptr
-        assignedID = -1; // Use a special value (-1) to indicate no ID for nullptr
+    // Contructor copy 2 aplica para los valores de null
+    Mpointer(const std::nullptr_t nullValue){
+        ptr = nullptr;
+        assignedID = -1;
         //cout << "MPointer::Constructor Copy 2" << endl;
     }
+
     // Destructor
     ~Mpointer(){
         if (assignedID != -1) {
             MPointerGC::GetInstance()->delete_ref(assignedID);
         }
-        cout << "MPointer::Destructor" << assignedID << endl;
+        //cout << "MPointer::Destructor" << assignedID << endl;
     }
 
     // Genera un nuevo Mpointer sin llamar al constructor directamente
@@ -48,7 +50,6 @@ public:
     {
         return Mpointer<T>();
     }
-
 
     // Sobrecarga de *, accede a la memoria de *ptr para que se le asigne un valor
     T& operator*(){
@@ -68,13 +69,12 @@ public:
     }
 
     // Operador de asignación para apuntar a null
-    Mpointer<T>& operator=(std::nullptr_t)
-    {
+    Mpointer<T>& operator=(std::nullptr_t){
         ptr = nullptr;  // Assign internal pointer to nullptr
         if (assignedID != -1) {
-            MPointerGC::GetInstance()->delete_ref(assignedID); // Reduce ref count for the current ID
+            MPointerGC::GetInstance()->delete_ref(assignedID);
         }
-        assignedID = -1; // Mark the ID as -1 to indicate nullptr
+        assignedID = -1;
         return *this;
     }
 
@@ -99,10 +99,9 @@ public:
         return *this;
     }
 
-    // Sobrecarga del operador de igualdad
+    // Sobrecarga del operador de igualdad y compara si dos punteros apuntan a la misma dirección de memoria
     bool operator==(const Mpointer<T>& other) const {
-        // Comparar si los dos punteros apuntan a la misma dirección de memoria
-        cout << "COMPARACION" << endl;
+        //cout << "COMPARACION" << endl;
         return this->ptr == other.ptr;
     }
 

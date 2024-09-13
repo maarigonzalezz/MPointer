@@ -7,10 +7,8 @@
 void DoubleLinkedList::add(int val) {
     Mpointer<Nod3> newNode = Mpointer<Nod3>::New();
     newNode->value = val;
-
-    MPointerGC::GetInstance()->debug(); // Solo si necesitas debuggear
-
-    // Comparar si `tail` es igual a `nullptr`
+    //MPointerGC::GetInstance()->debug(); // Solo si necesitas debuggear
+    // Comparar si tail es igual a nullptr
     if (tail == nullptr) {
         head = tail = newNode;
     } else {
@@ -41,13 +39,15 @@ void DoubleLinkedList::printBackward() const {
     std::cout << std::endl;
 }
 
+// retorna el largo de la lista
 int DoubleLinkedList::getLength() const {
     return length;
 }
 
+// Metodo para conseguir el indice
 Mpointer<Nod3> DoubleLinkedList::getNodeAt(int index) const {
     if (index < 0 || index >= length) {
-        throw std::out_of_range("Index out of bounds");
+        throw out_of_range("Index out of bounds");
     }
     Mpointer<Nod3> current = head;
     for (int i = 0; i < index; ++i) {
@@ -56,10 +56,12 @@ Mpointer<Nod3> DoubleLinkedList::getNodeAt(int index) const {
     return current;
 }
 
+// Metodo para obetener el valor en el indice indicado
 int DoubleLinkedList::get(int index) const {
     return getNodeAt(index)->value;
 }
 
+// Cambia el valor en el índice indicado
 void DoubleLinkedList::set(int index, int val) {
     Mpointer<Nod3> node = getNodeAt(index);
     node->value = val;
