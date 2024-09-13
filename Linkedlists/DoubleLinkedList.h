@@ -4,7 +4,7 @@
 
 #ifndef DOUBLELINKEDLIST_H
 #define DOUBLELINKEDLIST_H
-#include <library.h>
+#include <MPointer.h>
 
 struct Nod3{
 public:
@@ -22,9 +22,19 @@ public:
     DoubleLinkedList() = default;
 
     // Destructor de la lista
-    ~DoubleLinkedList()
-    {
-        cout << "DESTRUCTOR DLL" << endl;
+    ~DoubleLinkedList() {
+        Mpointer<Nod3> current = head;
+        while (current != nullptr) {
+            Mpointer<Nod3> next = current->next;  // Guardar el siguiente nodo
+            current->prev = nullptr;  // Eliminar la referencia al nodo anterior
+            current->next = nullptr;  // Eliminar la referencia al nodo siguiente
+            current = nullptr;  // Eliminar el nodo actual (esto llamará al destructor de Mpointer)
+            current = next;  // Avanzar al siguiente nodo
+        }
+        head = nullptr;
+        tail = nullptr;
+        length = 0;
+        std::cout << "DESTRUCTOR DLL - Todos los nodos eliminados" << std::endl;
     }
 
     void add(int value);

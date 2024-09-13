@@ -38,6 +38,7 @@ void MPointerGC::delete_ref(int id) {
     int ref = list.deleteRef(id);
     if (ref == 0) {
         void* adr = list.getAdress(id);
+        cout << "se va a liberar la memoria de: " << id << endl;
         this->freeMpointer(adr);
     }
 }

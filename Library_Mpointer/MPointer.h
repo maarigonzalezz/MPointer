@@ -37,7 +37,7 @@ public:
         MPointerGC::GetInstance()->delete_ref(assignedID);
             //delete ptr;
             ptr = nullptr;
-            //cout << "MPointer::Destructor" << endl;
+            cout << "MPointer::Destructor" << assignedID << endl;
     }
 
     // Genera un nuevo Mpointer sin llamar al constructor directamente
@@ -94,6 +94,7 @@ public:
     // Sobrecarga del operador de igualdad
     bool operator==(const Mpointer<T>& other) const {
         // Comparar si los dos punteros apuntan a la misma dirección de memoria
+        cout << "COMPARACION" << endl;
         return this->ptr == other.ptr;
     }
 

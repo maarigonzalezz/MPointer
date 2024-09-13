@@ -1,5 +1,5 @@
 #include <iostream>
-#include "library.h"
+#include "MPointer.h"
 #include "DoubleLinkedList.h"
 #include "Sorters.h"
 using namespace std;
@@ -24,7 +24,7 @@ struct Alo
 
 int main() {
     std::this_thread::sleep_for(std::chrono::milliseconds(1000));
-    Mpointer<int> mp1 = Mpointer<int>::New();
+    /*Mpointer<int> mp1 = Mpointer<int>::New();
     Mpointer<int> mp2 = Mpointer<int>::New();
     Mpointer<double> doub = Mpointer<double>::New();
     Mpointer<double> doub2 = Mpointer<double>::New();
@@ -49,16 +49,16 @@ int main() {
     mp3 = mp1;
     doub2 = doub;
     Mpointer<double> doub3 = Mpointer<double>::New();
-    MPointerGC::GetInstance()->debug();
+    MPointerGC::GetInstance()->debug();*/
 
     DoubleLinkedList testlist;
     Sorters sorter;
     testlist.add(1);
     //testlist.add(2);
     testlist.add(31);
-    testlist.add(19);
-    testlist.add(110);
-    testlist.add(79);
+    //testlist.add(19);
+    //testlist.add(110);
+    //testlist.add(79);
 
     testlist.printForward();
     //testlist.printBackward();

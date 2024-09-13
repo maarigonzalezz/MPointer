@@ -31,7 +31,7 @@ void Sorters::quickSort(DoubleLinkedList& arr, int low, int high) {
         quickSort(arr, low, pi - 1);
         quickSort(arr, pi + 1, high);
     }
-    cout << "quickSort" << endl;
+    cout << "QUICKSORT" << endl;
 }
 
 // BubbleSort algorithm
@@ -48,7 +48,7 @@ void Sorters::bubbleSort(DoubleLinkedList& arr) {
             }
         }
     }
-    cout << "bubbleSort" << endl;
+    cout << "BUBBLESORT" << endl;
 }
 
 // InsertionSort algorithm
@@ -65,6 +65,6 @@ void Sorters::insertionSort(DoubleLinkedList& arr) {
         }
         arr.set(j + 1, key);
     }
-    cout << "insertionSort" << endl;
+    cout << "INSERTIONSORT" << endl;
 }
 
