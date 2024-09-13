@@ -19,10 +19,8 @@ struct Node
 
 // Lista enlazada
 class LinkedList {
-private:
-    Node* head;     // Puntero al primer nodo de la lista
-
 public:
+    Node* head;     // Puntero al primer nodo de la lista
     // Constructor de la lista
     LinkedList() : head(nullptr) {}
 

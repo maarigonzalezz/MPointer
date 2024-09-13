@@ -15,19 +15,25 @@ using namespace std;
 class MPointerGC {
     LinkedList list;
 private:
-    static MPointerGC * pinstance_;
+    static MPointerGC *pinstance_;
     static std::mutex mutexx;
     int autoid = 0;
 
 protected:
-    MPointerGC()= default;
-    ~MPointerGC() = default;
-
+    MPointerGC() = default;
+    ~MPointerGC() {
+        // Ensure memory is freed before destruction
+        Node* current = list.head;
+        while (current != nullptr) {
+            freeMpointer(current->adress);
+            current = current->next;
+        }
+    }
 
 public:
+    MPointerGC(MPointerGC &other) = delete; // Prevent cloning
+    void operator=(const MPointerGC &) = delete; // Prevent assignment
 
-    MPointerGC(MPointerGC &other) = delete; //Evitar que se clone
-    void operator=(const MPointerGC &) = delete;//Evitar que se copie
     static MPointerGC *GetInstance();
     int registerMemory(void* adress);
     void add_ref(int id);

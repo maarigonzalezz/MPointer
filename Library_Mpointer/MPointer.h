@@ -15,7 +15,9 @@ private:
     //Constructor
     Mpointer(){
         ptr = new T();
-        assignedID = MPointerGC::GetInstance()->registerMemory(ptr); // Asigna un id
+        if (ptr != nullptr) {
+            assignedID = MPointerGC::GetInstance()->registerMemory(ptr);
+        }
         cout << "MPointer::New" << endl;
     }
 public:
@@ -29,15 +31,16 @@ public:
 
     Mpointer(const std::nullptr_t nullValue)
     {
-        ptr = nullValue;
+        ptr = nullptr; // Set the internal pointer to nullptr
+        assignedID = -1; // Use a special value (-1) to indicate no ID for nullptr
         //cout << "MPointer::Constructor Copy 2" << endl;
     }
     // Destructor
     ~Mpointer(){
-        MPointerGC::GetInstance()->delete_ref(assignedID);
-            //delete ptr;
-            ptr = nullptr;
-            cout << "MPointer::Destructor" << assignedID << endl;
+        if (assignedID != -1) {
+            MPointerGC::GetInstance()->delete_ref(assignedID);
+        }
+        cout << "MPointer::Destructor" << assignedID << endl;
     }
 
     // Genera un nuevo Mpointer sin llamar al constructor directamente
@@ -65,8 +68,13 @@ public:
     }
 
     // Operador de asignación para apuntar a null
-    Mpointer<T>& operator=(std::nullptr_t) {
-        ptr = nullptr;  // Asignar el puntero interno a nullptr
+    Mpointer<T>& operator=(std::nullptr_t)
+    {
+        ptr = nullptr;  // Assign internal pointer to nullptr
+        if (assignedID != -1) {
+            MPointerGC::GetInstance()->delete_ref(assignedID); // Reduce ref count for the current ID
+        }
+        assignedID = -1; // Mark the ID as -1 to indicate nullptr
         return *this;
     }
 

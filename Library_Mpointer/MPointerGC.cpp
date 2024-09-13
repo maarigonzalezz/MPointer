@@ -10,46 +10,56 @@ std::mutex MPointerGC::mutexx;
 
 
 // Controla el acceso a la instancia
-MPointerGC *MPointerGC::GetInstance()
-{
+MPointerGC *MPointerGC::GetInstance() {
     std::lock_guard<std::mutex> lock(mutexx);
-    if (pinstance_ == nullptr)
-    {
+    if (pinstance_ == nullptr) {
         pinstance_ = new MPointerGC();
     }
     return pinstance_;
 }
 
-// Genera un ID y ademas lo registra en la linked list con la direccion de memoria
-int MPointerGC::registerMemory(void* adress){
-   this->autoid ++;
+// Genera un ID y lo registra en la lista enlazada
+int MPointerGC::registerMemory(void* adress) {
+    std::lock_guard<std::mutex> lock(mutexx); // Thread safety
+    this->autoid++;
     int iD = this->autoid;
     this->list.newMpointer(iD, adress);
     return iD;
 }
 
-// Llama el metodo de la linked list para que añada una referencia
-void MPointerGC::add_ref(int id){
+// Añade una referencia
+void MPointerGC::add_ref(int id) {
+    std::lock_guard<std::mutex> lock(mutexx); // Thread safety
     list.addRef(id);
 }
 
-// Funcion booleana que verifica si ya no existen referencias
+// Resta una referencia y libera si es necesario
 void MPointerGC::delete_ref(int id) {
+    std::lock_guard<std::mutex> lock(mutexx); // Thread safety
     int ref = list.deleteRef(id);
     if (ref == 0) {
         void* adr = list.getAdress(id);
-        cout << "se va a liberar la memoria de: " << id << endl;
-        this->freeMpointer(adr);
+        if (adr != nullptr) {
+            cout << "Se va a liberar la memoria de ID: " << id << endl;
+            this->freeMpointer(adr);
+        } else {
+            cout << "Error: Dirección no encontrada para ID: " << id << endl;
+        }
     }
 }
 
-void MPointerGC::freeMpointer(void* adress){
-    free(adress);
-    cout << "MPointer Deleted" << endl;
+// Libera memoria correctamente
+void MPointerGC::freeMpointer(void* adress) {
+    if (adress != nullptr) {
+        free(adress); // Use delete for memory allocated with 'new'
+        cout << "MPointer Deleted" << endl;
+    } else {
+        cout << "Error: Dirección de memoria nula." << endl;
+    }
 }
 
-
-// Función debug, llama a linked list para que imprima los datos
-void MPointerGC::debug(){
+// Función debug para imprimir la lista de referencias
+void MPointerGC::debug() {
+    std::lock_guard<std::mutex> lock(mutexx); // Thread safety
     list.print();
 }

@@ -24,10 +24,15 @@ public:
     // Destructor de la lista
     ~DoubleLinkedList() {
         Mpointer<Nod3> current = head;
+        cout << "id 0?" << endl;
         while (current != nullptr) {
+
             Mpointer<Nod3> next = current->next;  // Guardar el siguiente nodo
+            cout << "aqi" << endl;
             current->prev = nullptr;  // Eliminar la referencia al nodo anterior
+            cout << "aqui 2" << endl;
             current->next = nullptr;  // Eliminar la referencia al nodo siguiente
+            cout << "aqui 3" << endl;
             current = nullptr;  // Eliminar el nodo actual (esto llamará al destructor de Mpointer)
             current = next;  // Avanzar al siguiente nodo
         }
