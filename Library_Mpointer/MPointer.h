@@ -68,6 +68,10 @@ public:
         return this->ptr;
     }
 
+    T* get() const {
+        return ptr;
+    }
+
     // Operador de asignación para apuntar a null
     Mpointer<T>& operator=(std::nullptr_t){
         ptr = nullptr;

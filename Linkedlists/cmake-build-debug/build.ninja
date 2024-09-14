@@ -49,26 +49,26 @@ cmake_ninja_workdir = C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/cmak
 
 build cmake_object_order_depends_target_Linkedlists: phony || CMakeFiles/Linkedlists.dir
 
-build CMakeFiles/Linkedlists.dir/main.cpp.obj: CXX_COMPILER__Linkedlists_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/main.cpp || cmake_object_order_depends_target_Linkedlists
-  DEP_FILE = CMakeFiles\Linkedlists.dir\main.cpp.obj.d
+build CMakeFiles/Linkedlists.dir/src/main.cpp.obj: CXX_COMPILER__Linkedlists_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/src/main.cpp || cmake_object_order_depends_target_Linkedlists
+  DEP_FILE = CMakeFiles\Linkedlists.dir\src\main.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer
   OBJECT_DIR = CMakeFiles\Linkedlists.dir
-  OBJECT_FILE_DIR = CMakeFiles\Linkedlists.dir
+  OBJECT_FILE_DIR = CMakeFiles\Linkedlists.dir\src
 
-build CMakeFiles/Linkedlists.dir/DoubleLinkedList.cpp.obj: CXX_COMPILER__Linkedlists_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/DoubleLinkedList.cpp || cmake_object_order_depends_target_Linkedlists
-  DEP_FILE = CMakeFiles\Linkedlists.dir\DoubleLinkedList.cpp.obj.d
+build CMakeFiles/Linkedlists.dir/src/DoubleLinkedList.cpp.obj: CXX_COMPILER__Linkedlists_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/src/DoubleLinkedList.cpp || cmake_object_order_depends_target_Linkedlists
+  DEP_FILE = CMakeFiles\Linkedlists.dir\src\DoubleLinkedList.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer
   OBJECT_DIR = CMakeFiles\Linkedlists.dir
-  OBJECT_FILE_DIR = CMakeFiles\Linkedlists.dir
+  OBJECT_FILE_DIR = CMakeFiles\Linkedlists.dir\src
 
-build CMakeFiles/Linkedlists.dir/Sorters.cpp.obj: CXX_COMPILER__Linkedlists_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/Sorters.cpp || cmake_object_order_depends_target_Linkedlists
-  DEP_FILE = CMakeFiles\Linkedlists.dir\Sorters.cpp.obj.d
+build CMakeFiles/Linkedlists.dir/src/Sorters.cpp.obj: CXX_COMPILER__Linkedlists_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/src/Sorters.cpp || cmake_object_order_depends_target_Linkedlists
+  DEP_FILE = CMakeFiles\Linkedlists.dir\src\Sorters.cpp.obj.d
   FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
   INCLUDES = -IC:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer
   OBJECT_DIR = CMakeFiles\Linkedlists.dir
-  OBJECT_FILE_DIR = CMakeFiles\Linkedlists.dir
+  OBJECT_FILE_DIR = CMakeFiles\Linkedlists.dir\src
 
 
 # =============================================================================
@@ -78,7 +78,7 @@ build CMakeFiles/Linkedlists.dir/Sorters.cpp.obj: CXX_COMPILER__Linkedlists_unsc
 #############################################
 # Link the executable Linkedlists.exe
 
-build Linkedlists.exe: CXX_EXECUTABLE_LINKER__Linkedlists_Debug CMakeFiles/Linkedlists.dir/main.cpp.obj CMakeFiles/Linkedlists.dir/DoubleLinkedList.cpp.obj CMakeFiles/Linkedlists.dir/Sorters.cpp.obj | C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a
+build Linkedlists.exe: CXX_EXECUTABLE_LINKER__Linkedlists_Debug CMakeFiles/Linkedlists.dir/src/main.cpp.obj CMakeFiles/Linkedlists.dir/src/DoubleLinkedList.cpp.obj CMakeFiles/Linkedlists.dir/src/Sorters.cpp.obj | C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a
   FLAGS = -g
   LINK_LIBRARIES = C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Linkedlists.dir
@@ -87,6 +87,52 @@ build Linkedlists.exe: CXX_EXECUTABLE_LINKER__Linkedlists_Debug CMakeFiles/Linke
   TARGET_FILE = Linkedlists.exe
   TARGET_IMPLIB = libLinkedlists.dll.a
   TARGET_PDB = Linkedlists.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Linkedlists_tests
+
+
+#############################################
+# Order-only phony target for Linkedlists_tests
+
+build cmake_object_order_depends_target_Linkedlists_tests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build CMakeFiles/Linkedlists_tests.dir/tst/test_main.cpp.obj: CXX_COMPILER__Linkedlists_tests_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/tst/test_main.cpp || cmake_object_order_depends_target_Linkedlists_tests
+  DEP_FILE = CMakeFiles\Linkedlists_tests.dir\tst\test_main.cpp.obj.d
+  FLAGS = -g -std=gnu++20 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer -isystem C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/include -isystem C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest
+  OBJECT_DIR = CMakeFiles\Linkedlists_tests.dir
+  OBJECT_FILE_DIR = CMakeFiles\Linkedlists_tests.dir\tst
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Linkedlists_tests
+
+
+#############################################
+# Link the executable Linkedlists_tests.exe
+
+build Linkedlists_tests.exe: CXX_EXECUTABLE_LINKER__Linkedlists_tests_Debug CMakeFiles/Linkedlists_tests.dir/tst/test_main.cpp.obj | lib/libgtest.a lib/libgtest_main.a C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/../Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Linkedlists_tests.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Linkedlists_tests.exe
+  TARGET_IMPLIB = libLinkedlists_tests.dll.a
+  TARGET_PDB = Linkedlists_tests.exe.dbg
+
+
+#############################################
+# Utility command for test
+
+build CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test: phony CMakeFiles/test.util
 
 
 #############################################
@@ -110,6 +156,422 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
   restat = 1
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for test
+
+build lib/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build lib/googletest/test: phony lib/googletest/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build lib/googletest/edit_cache: phony lib/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists -BC:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/googletest/rebuild_cache: phony lib/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/googletest/CMakeFiles/install.util: CUSTOM_COMMAND lib/googletest/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/googletest/install: phony lib/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/googletest/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/googletest/install/local: phony lib/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/googletest/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/googletest/install/strip: phony lib/googletest/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
+
+build lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = lib\googletest\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
+  FLAGS = -g -std=c++20 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -IC:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/include -IC:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock -isystem C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/include -isystem C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest
+  OBJECT_DIR = lib\googletest\googlemock\CMakeFiles\gmock.dir
+  OBJECT_FILE_DIR = lib\googletest\googlemock\CMakeFiles\gmock.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib\libgmock.a
+
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug lib/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = lib\googletest\googlemock\CMakeFiles\gmock.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgmock.a
+  TARGET_PDB = gmock.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
+
+build lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = lib\googletest\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
+  FLAGS = -g -std=c++20 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/include -isystem C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock -isystem C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/include -isystem C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest
+  OBJECT_DIR = lib\googletest\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_FILE_DIR = lib\googletest\googlemock\CMakeFiles\gmock_main.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib\libgmock_main.a
+
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug lib/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj || lib/libgmock.a lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = lib\googletest\googlemock\CMakeFiles\gmock_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgmock_main.a
+  TARGET_PDB = gmock_main.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build lib/googletest/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build lib/googletest/googlemock/test: phony lib/googletest/googlemock/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/googletest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build lib/googletest/googlemock/edit_cache: phony lib/googletest/googlemock/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/googletest/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists -BC:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/googletest/googlemock/rebuild_cache: phony lib/googletest/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/googletest/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/googletest/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND lib/googletest/googlemock/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/googletest/googlemock/install: phony lib/googletest/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/googletest/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/googletest/googlemock/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/googletest/googlemock/install/local: phony lib/googletest/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/googletest/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/googletest/googlemock/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/googletest/googlemock/install/strip: phony lib/googletest/googlemock/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || lib/googletest/googletest/CMakeFiles/gtest.dir
+
+build lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = lib\googletest\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
+  FLAGS = -g -std=c++20 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -IC:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/include -IC:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest
+  OBJECT_DIR = lib\googletest\googletest\CMakeFiles\gtest.dir
+  OBJECT_FILE_DIR = lib\googletest\googletest\CMakeFiles\gtest.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib\libgtest.a
+
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug lib/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = lib\googletest\googletest\CMakeFiles\gtest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgtest.a
+  TARGET_PDB = gtest.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = lib\googletest\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
+  FLAGS = -g -std=c++20 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/include -isystem C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest
+  OBJECT_DIR = lib\googletest\googletest\CMakeFiles\gtest_main.dir
+  OBJECT_FILE_DIR = lib\googletest\googletest\CMakeFiles\gtest_main.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib\libgtest_main.a
+
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug lib/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = lib\googletest\googletest\CMakeFiles\gtest_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgtest_main.a
+  TARGET_PDB = gtest_main.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build lib/googletest/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build lib/googletest/googletest/test: phony lib/googletest/googletest/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build lib/googletest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build lib/googletest/googletest/edit_cache: phony lib/googletest/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build lib/googletest/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists -BC:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build lib/googletest/googletest/rebuild_cache: phony lib/googletest/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build lib/googletest/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build lib/googletest/googletest/CMakeFiles/install.util: CUSTOM_COMMAND lib/googletest/googletest/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build lib/googletest/googletest/install: phony lib/googletest/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build lib/googletest/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND lib/googletest/googletest/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build lib/googletest/googletest/install/local: phony lib/googletest/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build lib/googletest/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND lib/googletest/googletest/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Linkedlists\cmake-build-debug\lib\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build lib/googletest/googletest/install/strip: phony lib/googletest/googletest/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -155,6 +617,18 @@ build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-deb
 
 
 #############################################
+# Utility command for test
+
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/test: phony C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/test.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
@@ -176,6 +650,48 @@ build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-deb
 
 build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/rebuild_cache: phony C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/install.util: CUSTOM_COMMAND C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/install: phony C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/install/local.util: CUSTOM_COMMAND C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/install/local: phony C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/install/strip.util: CUSTOM_COMMAND C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/all
+  COMMAND = C:\Windows\system32\cmd.exe /C "cd /D C:\Users\gonza\OneDrive\Desktop\MPointer\Library_Mpointer\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.4\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/install/strip: phony C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
 
@@ -183,7 +699,25 @@ build Library_Mpointer: phony C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_
 
 build Linkedlists: phony Linkedlists.exe
 
+build Linkedlists_tests: phony Linkedlists_tests.exe
+
+build gmock: phony lib/libgmock.a
+
+build gmock_main: phony lib/libgmock_main.a
+
+build gtest: phony lib/libgtest.a
+
+build gtest_main: phony lib/libgtest_main.a
+
 build libLibrary_Mpointer.a: phony C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/libLibrary_Mpointer.a
+
+build libgmock.a: phony lib/libgmock.a
+
+build libgmock_main.a: phony lib/libgmock_main.a
+
+build libgtest.a: phony lib/libgtest.a
+
+build libgtest_main.a: phony lib/libgtest_main.a
 
 # =============================================================================
 # Folder targets.
@@ -200,7 +734,28 @@ build C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-deb
 #############################################
 # Folder: C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/cmake-build-debug
 
-build all: phony Linkedlists.exe C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/all
+build all: phony Linkedlists.exe Linkedlists_tests.exe lib/googletest/all C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/cmake-build-debug/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/cmake-build-debug/lib/googletest
+
+build lib/googletest/all: phony lib/googletest/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/cmake-build-debug/lib/googletest/googlemock
+
+build lib/googletest/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a lib/googletest/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/cmake-build-debug/lib/googletest/googletest
+
+build lib/googletest/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
 # Built-in targets
@@ -209,14 +764,14 @@ build all: phony Linkedlists.exe C$:/Users/gonza/OneDrive/Desktop/MPointer/Libra
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/cmake/gmock.pc.in C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/cmake/gmock_main.pc.in C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/cmake/Config.cmake.in C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/cmake/gtest.pc.in C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/cmake/gtest_main.pc.in C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/cmake/internal_utils.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.4/bin/cmake/win/x64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/gonza/OneDrive/Desktop/MPointer/Library_Mpointer/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/cmake/gmock.pc.in C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googlemock/cmake/gmock_main.pc.in C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/CMakeLists.txt C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/cmake/Config.cmake.in C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/cmake/gtest.pc.in C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/cmake/gtest_main.pc.in C$:/Users/gonza/OneDrive/Desktop/MPointer/Linkedlists/lib/googletest/googletest/cmake/internal_utils.cmake CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################
